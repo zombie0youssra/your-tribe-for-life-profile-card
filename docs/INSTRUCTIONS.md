@@ -3,20 +3,18 @@ De conventie voor naamgeving is sprintnaam-(sub)taaknaam
 Topics: (sub)task semester-naam, semesternummer, sprint-naam, sprint-nummer
 -->
 
-# Naam
+# your-tribe-for-life-profile-card
 
-Beschrijving van de leertaak
+Redesign je visitekaartje op basis van een headless CMS en een framework.
 
 ## Context
-Deze leertaak hoort bij [sprint # "titel van de sprint"]. Dit is een [niveau van de opdracht] die je [individueel, in team] uitvoert voor [opdrachtgever]
+Deze leertaak hoort bij sprint 13: Your Tribe for Life. Dit is een autonome opdracht die je individueel uitvoert voor jouw eigen FDND Tribe.
 
 ## Doel van deze opdracht
-*Wat leer je in deze taak.*
 
-beschrijf de taak in actieve taal: Je leert hoe...
+Je leert hoe je één datapunt uit een headless CMS selecteert en weergeeft op een website. Daarbij is het belangrijk óók de stijlelementen dynamisch in te zetten om jouw persoonlijkheid te laten doorschijnen in jouw visitekaartje.
 
 ## Werkwijze
-*De werkwijze volgt de fasering van de DLC*
 
 Bij elke leertaak wordt de development-lifecycle doorlopen. Hierdoor ontwikkel je een standaard aanpak voor frontend praktijkvraagstukken, werk je systematisch aan leertaken, ervaar je de relevantie van het geleerde en verwerf je de kennis, houding en vaardigheden die de beroepspraktijk van je vraagt.
 De development lifecycle kent de volgende stappen:
@@ -35,13 +33,14 @@ De development lifecycle kent de volgende stappen:
 
 ## Criteria
 
-Focus sprint # - De focus in deze sprint ligt op ...
+Focus sprint 13 - Je hebt al een basis social network voor jouw squad. Breid dit social network uit naar een platform waarop de tribe members elkaar kunnen vinden en ondersteunen. In ieder geval gedurende het begin van jullie carriere als frontend designer & developer.
 
-Voor deze leertaak gelden de gedragscriteria voor sprint #: 
-...
+De focus ligt op team building, samenwerken en hoe je frameworks inzet om een gezamenlijk doel te bereiken én in contact te blijven.
 
-
-
-
-
-
+Voor deze leertaak gelden de gedragscriteria voor sprint 13: 
+- **M:** Richt in overleg projecten in volgens de development-lifecycle.
+- **M:** Combineert onderbouwd principes, conventies en best-practices op het gebied van frontend, interface design en vormgeving.
+- **S:** Werkt in teams en signaleert verbeterpunten op gebied van efficiëntie en effectiviteit.
+- **C:** Documenteert op professionele wijze en bespreekt voortgang binnen het team.
+- **P:** Schetst om gedachten en processen te verkennen, abstracte begrippen over te brengen en de oplossingsrichting inzichtelijk te maken.
+- **L:** Kent eigen capaciteiten en beperkingen, waardeert het vermogen van anderen en maakt dit bespreekbaar.

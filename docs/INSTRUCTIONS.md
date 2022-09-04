@@ -38,9 +38,9 @@ Focus sprint 13 - Je hebt al een basis social network voor jouw squad. Breid dit
 De focus ligt op team building, samenwerken en hoe je frameworks inzet om een gezamenlijk doel te bereiken én in contact te blijven.
 
 Voor deze leertaak gelden de gedragscriteria voor sprint 13: 
-- **M:** Richt in overleg projecten in volgens de development-lifecycle.
-- **M:** Combineert onderbouwd principes, conventies en best-practices op het gebied van frontend, interface design en vormgeving.
+
 - **S:** Werkt in teams en signaleert verbeterpunten op gebied van efficiëntie en effectiviteit.
+- **S:** Kan omgaan met diversiteit binnen teams en handelt respectvol naar anderen.
+- **C:** Betrekt gesprekspartners, luistert, vat samen, verifieert en vraagt door tot een boodschap helder is.
 - **C:** Documenteert op professionele wijze en bespreekt voortgang binnen het team.
 - **P:** Schetst om gedachten en processen te verkennen, abstracte begrippen over te brengen en de oplossingsrichting inzichtelijk te maken.
-- **L:** Kent eigen capaciteiten en beperkingen, waardeert het vermogen van anderen en maakt dit bespreekbaar.

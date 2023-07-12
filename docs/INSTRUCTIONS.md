@@ -41,6 +41,6 @@ Voor deze leertaak gelden de gedragscriteria voor sprint 13:
 
 - **S:** Werkt in teams en signaleert verbeterpunten op gebied van efficiëntie en effectiviteit.
 - **S:** Kan omgaan met diversiteit binnen teams en handelt respectvol naar anderen.
-- **C:** Betrekt gesprekspartners, luistert, vat samen, verifieert en vraagt door tot een boodschap helder is.
+- **C:** Luistert, vat samen, verifieert en vraagt door tot een boodschap helder is.
 - **C:** Documenteert op professionele wijze en bespreekt voortgang binnen het team.
 - **P:** Schetst om gedachten en processen te verkennen, abstracte begrippen over te brengen en de oplossingsrichting inzichtelijk te maken.

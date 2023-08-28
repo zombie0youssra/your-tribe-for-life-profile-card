@@ -31,16 +31,9 @@ De development lifecycle kent de volgende stappen:
 3. Hou je proces bij in de Wiki van de geforkte repository
 4. En schrijf een goede readme
 
-## Criteria
+## Definitions of Done
 
 Focus sprint 13 - Je hebt al een basis social network voor jouw squad. Breid dit social network uit naar een platform waarop de tribe members elkaar kunnen vinden en ondersteunen. In ieder geval gedurende het begin van jullie carriere als frontend designer & developer.
 
 De focus ligt op team building, samenwerken en hoe je frameworks inzet om een gezamenlijk doel te bereiken én in contact te blijven.
 
-Voor deze leertaak gelden de gedragscriteria voor sprint 13: 
-
-- **S:** Werkt in teams en signaleert verbeterpunten op gebied van efficiëntie en effectiviteit.
-- **S:** Kan omgaan met diversiteit binnen teams en handelt respectvol naar anderen.
-- **C:** Luistert, vat samen, verifieert en vraagt door tot een boodschap helder is.
-- **C:** Documenteert op professionele wijze en bespreekt voortgang binnen het team.
-- **P:** Schetst om gedachten en processen te verkennen, abstracte begrippen over te brengen en de oplossingsrichting inzichtelijk te maken.

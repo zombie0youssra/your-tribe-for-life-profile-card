@@ -4,7 +4,7 @@ import config from '../../slicemachine.config.json';
 /**
  * The project's Prismic repository name.
  */
-export const repositoryName = 'config.youssra-profile-card';
+export const repositoryName = 'youssra-profile-card';
 
 /**
  * A list of Route Resolver objects that define how a document's `url` field is resolved.
@@ -16,7 +16,7 @@ export const repositoryName = 'config.youssra-profile-card';
 // TODO: Update the routes array to match your project's route structure.
 const routes = [
 	{
-		type: 'homepage',
+		type: 'page',
 		uid:'about',
 		path: '/'
 	},

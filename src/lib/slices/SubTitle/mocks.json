@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"frontend_dreamer": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat velit qui cillum magna aute pariatur magna mollit nisi ea. Dolore aliquip excepteur pariatur duis minim tempor culpa laborum consequat nulla tempor veniam sunt ipsum ad."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

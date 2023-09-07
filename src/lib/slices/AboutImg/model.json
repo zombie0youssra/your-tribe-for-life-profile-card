@@ -1,0 +1,27 @@
+{
+  "id": "about_img",
+  "type": "SharedSlice",
+  "name": "AboutImg",
+  "description": "AboutImg",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "itsme": {
+          "type": "Image",
+          "config": {
+            "label": "Itsme",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -6,8 +6,8 @@
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<img src={slice.primary.aboutImg.url} alt={slice.primary.aboutImg.alt} />
 </section>
-<pre>
+<!-- <pre>
 
     {JSON.stringify(slice, null, 3)}
 
-</pre>
+</pre> -->

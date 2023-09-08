@@ -120,6 +120,17 @@ interface IndexDocumentData {
 	title: prismic.KeyTextField;
 
 	/**
+	 * subtitle field in *index*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: index.subtitle
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField;
+
+	/**
 	 * textblock field in *index*
 	 *
 	 * - **Field Type**: Rich Text

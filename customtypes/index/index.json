@@ -28,6 +28,13 @@
 					"placeholder": ""
 				}
 			},
+			"subtitle": {
+				"type": "Text",
+				"config": {
+					"label": "subtitle",
+					"placeholder": ""
+				}
+			},
 			"textblock": {
 				"type": "StructuredText",
 				"config": {

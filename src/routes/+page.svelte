@@ -7,5 +7,4 @@
 	console.log(data);
 </script>
 
-<h2>halllooo</h2>
 <SliceZone slices={data.slices} {components} />

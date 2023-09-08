@@ -1,6 +1,6 @@
 {
-	"id": "about",
-	"label": "about",
+	"id": "yolo",
+	"label": "yolo",
 	"format": "page",
 	"repeatable": true,
 	"status": true,
@@ -20,28 +20,11 @@
 					"thumbnails": []
 				}
 			},
-			"intro": {
-				"type": "Text",
-				"config": {
-					"label": "Intro",
-					"placeholder": ""
-				}
-			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
-					"choices": {
-						"sub_title": {
-							"type": "SharedSlice"
-						},
-						"about_img": {
-							"type": "SharedSlice"
-						},
-						"text_block": {
-							"type": "SharedSlice"
-						}
-					}
+					"choices": {}
 				}
 			}
 		},

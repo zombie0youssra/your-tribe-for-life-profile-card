@@ -1,8 +1,8 @@
 {
-  "id": "sub_title",
+  "id": "text_block",
   "type": "SharedSlice",
-  "name": "SubTitle",
-  "description": "SubTitle",
+  "name": "TextBlock",
+  "description": "TextBlock",
   "variations": [
     {
       "id": "default",
@@ -12,13 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "subTitle": {
+        "textblock": {
           "type": "StructuredText",
           "config": {
-            "label": "Subtitle",
-            "placeholder": "who am i",
+            "label": "Textblock",
+            "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

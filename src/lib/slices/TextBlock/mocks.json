@@ -3,13 +3,13 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"subTitle": {
+			"textblock": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Aliquip qui consectetur aliquip esse ea ex aliquip consequat commodo id."
+							"text": "Do officia do ex commodo voluptate sunt."
 						}
 					}
 				]

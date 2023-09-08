@@ -12,10 +12,10 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "itsme": {
+        "aboutImg": {
           "type": "Image",
           "config": {
-            "label": "Itsme",
+            "label": "aboutImg",
             "constraint": {},
             "thumbnails": []
           }

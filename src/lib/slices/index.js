@@ -2,10 +2,12 @@
 
 import AboutImg from './AboutImg/index.svelte';
 import SubTitle from './SubTitle/index.svelte';
+import TextBlock from './TextBlock/index.svelte';
 import Title from './Title/index.svelte';
 
 export const components = {
 	about_img: AboutImg,
 	sub_title: SubTitle,
+	text_block: TextBlock,
 	title: Title
 };

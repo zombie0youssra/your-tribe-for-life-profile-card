@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type AboutDocumentDataSlicesSlice = SubTitleSlice | AboutImgSlice;
+type AboutDocumentDataSlicesSlice = SubTitleSlice | AboutImgSlice | TextBlockSlice;
 
 /**
  * Content for about documents
@@ -76,14 +76,14 @@ export type AllDocumentTypes = AboutDocument;
  */
 export interface AboutImgSliceDefaultPrimary {
 	/**
-	 * Itsme field in *AboutImg → Primary*
+	 * aboutImg field in *AboutImg → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about_img.primary.itsme
+	 * - **API ID Path**: about_img.primary.aboutImg
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	itsme: prismic.ImageField<never>;
+	aboutImg: prismic.ImageField<never>;
 }
 
 /**
@@ -118,14 +118,14 @@ export type AboutImgSlice = prismic.SharedSlice<'about_img', AboutImgSliceVariat
  */
 export interface SubTitleSliceDefaultPrimary {
 	/**
-	 * Frontend dreamer field in *SubTitle → Primary*
+	 * Subtitle field in *SubTitle → Primary*
 	 *
 	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: sub_title.primary.frontend_dreamer
+	 * - **Placeholder**: who am i
+	 * - **API ID Path**: sub_title.primary.subTitle
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	frontend_dreamer: prismic.RichTextField;
+	subTitle: prismic.RichTextField;
 }
 
 /**
@@ -154,6 +154,48 @@ type SubTitleSliceVariation = SubTitleSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type SubTitleSlice = prismic.SharedSlice<'sub_title', SubTitleSliceVariation>;
+
+/**
+ * Primary content in *TextBlock → Primary*
+ */
+export interface TextBlockSliceDefaultPrimary {
+	/**
+	 * Textblock field in *TextBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_block.primary.textblock
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	textblock: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<TextBlockSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *TextBlock*
+ */
+type TextBlockSliceVariation = TextBlockSliceDefault;
+
+/**
+ * TextBlock Shared Slice
+ *
+ * - **API ID**: `text_block`
+ * - **Description**: TextBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextBlockSlice = prismic.SharedSlice<'text_block', TextBlockSliceVariation>;
 
 /**
  * Primary content in *Title → Primary*
@@ -219,6 +261,10 @@ declare module '@prismicio/client' {
 			SubTitleSliceDefaultPrimary,
 			SubTitleSliceVariation,
 			SubTitleSliceDefault,
+			TextBlockSlice,
+			TextBlockSliceDefaultPrimary,
+			TextBlockSliceVariation,
+			TextBlockSliceDefault,
 			TitleSlice,
 			TitleSliceDefaultPrimary,
 			TitleSliceVariation,

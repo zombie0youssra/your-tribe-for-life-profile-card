@@ -22,6 +22,9 @@
 						},
 						"about_img": {
 							"type": "SharedSlice"
+						},
+						"text_block": {
+							"type": "SharedSlice"
 						}
 					}
 				}

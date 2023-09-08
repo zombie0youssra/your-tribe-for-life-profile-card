@@ -1,38 +1,41 @@
-# create-svelte
+# Tribe fot life profilecard
+## Using svelteKit and Prismic.io
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<!-- Geef je project een titel en schrijf in één zin wat het is -->
 
-## Creating a project
+## Inhoudsopgave
 
-If you're seeing this, you've probably already done this step. Congrats!
+  * [Beschrijving](#beschrijving)
+  * [Gebruik](#gebruik)
+  * [Kenmerken](#kenmerken)
+  * [Installatie](#installatie)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Beschrijving
+<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
+<!-- Voeg een mooie poster visual toe 📸 -->
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
+<!-- Voeg een link toe naar Github Pages 🌐-->
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Gebruik
 
-```bash
-npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Kenmerken
+<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+### Tools 🍔
 
-## Building
 
-To create a production version of your app:
+### Gebruikte technieken 🍟
 
-```bash
-npm run build
-```
 
-You can preview the production build with `npm run preview`.
+## Installatie
+<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Bronnen
+
+## Licentie
+
+This project is licensed under the terms of the [MIT license](./LICENSE).

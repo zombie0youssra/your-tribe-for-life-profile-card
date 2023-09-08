@@ -4,7 +4,7 @@
 
 	export let data;
 
-	console.log(data);
+	// console.log(data);
 </script>
 
 <SliceZone slices={data.slices} {components} />

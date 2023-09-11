@@ -21,12 +21,32 @@
 					"thumbnails": []
 				}
 			},
+			"name": {
+				"type": "Text",
+				"config": {
+					"label": "name",
+					"placeholder": ""
+				}
+			},
+			"info": {
+				"type": "Text",
+				"config": {
+					"label": "info",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
 						"about_img": {
+							"type": "SharedSlice"
+						},
+						"name_text": {
+							"type": "SharedSlice"
+						},
+						"info_block": {
 							"type": "SharedSlice"
 						}
 					}

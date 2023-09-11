@@ -1,0 +1,26 @@
+{
+  "id": "name_text",
+  "type": "SharedSlice",
+  "name": "NameText",
+  "description": "NameText",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "youssra": {
+          "type": "Text",
+          "config": {
+            "label": "Youssra",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

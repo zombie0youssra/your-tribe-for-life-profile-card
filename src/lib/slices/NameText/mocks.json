@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"youssra": {
+				"__TYPE__": "FieldContent",
+				"value": "beside",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

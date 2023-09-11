@@ -1,0 +1,26 @@
+{
+  "id": "info_block",
+  "type": "SharedSlice",
+  "name": "InfoBlock",
+  "description": "InfoBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "infotext": {
+          "type": "Text",
+          "config": {
+            "label": "Infotext",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

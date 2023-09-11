@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type IndexDocumentDataSlicesSlice = AboutImgSlice;
+type IndexDocumentDataSlicesSlice = AboutImgSlice | NameTextSlice | InfoBlockSlice;
 
 /**
  * Content for index documents
@@ -20,6 +20,28 @@ interface IndexDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	aboutimg: prismic.ImageField<never>;
+
+	/**
+	 * name field in *index*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: index.name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * info field in *index*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: index.info
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	info: prismic.KeyTextField;
 
 	/**
 	 * Slice Zone field in *index*
@@ -125,130 +147,88 @@ type AboutImgSliceVariation = AboutImgSliceDefault;
 export type AboutImgSlice = prismic.SharedSlice<'about_img', AboutImgSliceVariation>;
 
 /**
- * Primary content in *SubTitle → Primary*
+ * Primary content in *InfoBlock → Items*
  */
-export interface SubTitleSliceDefaultPrimary {
+export interface InfoBlockSliceDefaultItem {
 	/**
-	 * Subtitle field in *SubTitle → Primary*
+	 * Infotext field in *InfoBlock → Items*
 	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: who am i
-	 * - **API ID Path**: sub_title.primary.subTitle
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	subTitle: prismic.RichTextField;
-}
-
-/**
- * Default variation for SubTitle Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SubTitleSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<SubTitleSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *SubTitle*
- */
-type SubTitleSliceVariation = SubTitleSliceDefault;
-
-/**
- * SubTitle Shared Slice
- *
- * - **API ID**: `sub_title`
- * - **Description**: SubTitle
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SubTitleSlice = prismic.SharedSlice<'sub_title', SubTitleSliceVariation>;
-
-/**
- * Primary content in *TextBlock → Primary*
- */
-export interface TextBlockSliceDefaultPrimary {
-	/**
-	 * Textblock field in *TextBlock → Primary*
-	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text_block.primary.textblock
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **API ID Path**: info_block.items[].infotext
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	textblock: prismic.RichTextField;
+	infotext: prismic.KeyTextField;
 }
 
 /**
- * Default variation for TextBlock Slice
+ * Default variation for InfoBlock Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+export type InfoBlockSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<TextBlockSliceDefaultPrimary>,
-	never
+	Record<string, never>,
+	Simplify<InfoBlockSliceDefaultItem>
 >;
 
 /**
- * Slice variation for *TextBlock*
+ * Slice variation for *InfoBlock*
  */
-type TextBlockSliceVariation = TextBlockSliceDefault;
+type InfoBlockSliceVariation = InfoBlockSliceDefault;
 
 /**
- * TextBlock Shared Slice
+ * InfoBlock Shared Slice
  *
- * - **API ID**: `text_block`
- * - **Description**: TextBlock
+ * - **API ID**: `info_block`
+ * - **Description**: InfoBlock
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type TextBlockSlice = prismic.SharedSlice<'text_block', TextBlockSliceVariation>;
+export type InfoBlockSlice = prismic.SharedSlice<'info_block', InfoBlockSliceVariation>;
 
 /**
- * Primary content in *Title → Primary*
+ * Primary content in *NameText → Primary*
  */
-export interface TitleSliceDefaultPrimary {
+export interface NameTextSliceDefaultPrimary {
 	/**
-	 * Welcome field in *Title → Primary*
+	 * Youssra field in *NameText → Primary*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title.primary.welcome
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **API ID Path**: name_text.primary.youssra
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	welcome: prismic.RichTextField;
+	youssra: prismic.KeyTextField;
 }
 
 /**
- * Default variation for Title Slice
+ * Default variation for NameText Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type TitleSliceDefault = prismic.SharedSliceVariation<
+export type NameTextSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<TitleSliceDefaultPrimary>,
+	Simplify<NameTextSliceDefaultPrimary>,
 	never
 >;
 
 /**
- * Slice variation for *Title*
+ * Slice variation for *NameText*
  */
-type TitleSliceVariation = TitleSliceDefault;
+type NameTextSliceVariation = NameTextSliceDefault;
 
 /**
- * Title Shared Slice
+ * NameText Shared Slice
  *
- * - **API ID**: `title`
- * - **Description**: Title
+ * - **API ID**: `name_text`
+ * - **Description**: NameText
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type TitleSlice = prismic.SharedSlice<'title', TitleSliceVariation>;
+export type NameTextSlice = prismic.SharedSlice<'name_text', NameTextSliceVariation>;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -268,18 +248,14 @@ declare module '@prismicio/client' {
 			AboutImgSliceDefaultPrimary,
 			AboutImgSliceVariation,
 			AboutImgSliceDefault,
-			SubTitleSlice,
-			SubTitleSliceDefaultPrimary,
-			SubTitleSliceVariation,
-			SubTitleSliceDefault,
-			TextBlockSlice,
-			TextBlockSliceDefaultPrimary,
-			TextBlockSliceVariation,
-			TextBlockSliceDefault,
-			TitleSlice,
-			TitleSliceDefaultPrimary,
-			TitleSliceVariation,
-			TitleSliceDefault
+			InfoBlockSlice,
+			InfoBlockSliceDefaultItem,
+			InfoBlockSliceVariation,
+			InfoBlockSliceDefault,
+			NameTextSlice,
+			NameTextSliceDefaultPrimary,
+			NameTextSliceVariation,
+			NameTextSliceDefault
 		};
 	}
 }

@@ -4,94 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type AboutDocumentDataSlicesSlice = SubTitleSlice | AboutImgSlice | TextBlockSlice;
-
-/**
- * Content for about documents
- */
-interface AboutDocumentData {
-	/**
-	 * image field in *about*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about.image
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	image: prismic.ImageField<never>;
-
-	/**
-	 * Intro field in *about*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about.intro
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	intro: prismic.KeyTextField;
-
-	/**
-	 * Slice Zone field in *about*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<AboutDocumentDataSlicesSlice>
-	/**
-	 * Meta Description field in *about*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: about.meta_description
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */;
-	meta_description: prismic.KeyTextField;
-
-	/**
-	 * Meta Image field in *about*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about.meta_image
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	meta_image: prismic.ImageField<never>;
-
-	/**
-	 * Meta Title field in *about*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: about.meta_title
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	meta_title: prismic.KeyTextField;
-}
-
-/**
- * about document from Prismic
- *
- * - **API ID**: `about`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type AboutDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-	Simplify<AboutDocumentData>,
-	'about',
-	Lang
->;
-
-type IndexDocumentDataSlicesSlice = AboutImgSlice | TitleSlice | SubTitleSlice | TextBlockSlice;
+type IndexDocumentDataSlicesSlice = AboutImgSlice;
 
 /**
  * Content for index documents
@@ -107,39 +20,6 @@ interface IndexDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	aboutimg: prismic.ImageField<never>;
-
-	/**
-	 * title field in *index*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.title
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	title: prismic.KeyTextField;
-
-	/**
-	 * subtitle field in *index*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.subtitle
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	subtitle: prismic.KeyTextField;
-
-	/**
-	 * textblock field in *index*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.textblock
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	textblock: prismic.RichTextField;
 
 	/**
 	 * Slice Zone field in *index*
@@ -200,83 +80,7 @@ export type IndexDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-type YoloDocumentDataSlicesSlice = never;
-
-/**
- * Content for yolo documents
- */
-interface YoloDocumentData {
-	/**
-	 * image field in *yolo*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: yolo.image
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	image: prismic.ImageField<never>;
-
-	/**
-	 * Slice Zone field in *yolo*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: yolo.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<YoloDocumentDataSlicesSlice>
-	/**
-	 * Meta Description field in *yolo*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: yolo.meta_description
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */;
-	meta_description: prismic.KeyTextField;
-
-	/**
-	 * Meta Image field in *yolo*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: yolo.meta_image
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	meta_image: prismic.ImageField<never>;
-
-	/**
-	 * Meta Title field in *yolo*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: yolo.meta_title
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	meta_title: prismic.KeyTextField;
-}
-
-/**
- * yolo document from Prismic
- *
- * - **API ID**: `yolo`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type YoloDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-	Simplify<YoloDocumentData>,
-	'yolo',
-	Lang
->;
-
-export type AllDocumentTypes = AboutDocument | IndexDocument | YoloDocument;
+export type AllDocumentTypes = IndexDocument;
 
 /**
  * Primary content in *AboutImg → Primary*
@@ -456,15 +260,9 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
-			AboutDocument,
-			AboutDocumentData,
-			AboutDocumentDataSlicesSlice,
 			IndexDocument,
 			IndexDocumentData,
 			IndexDocumentDataSlicesSlice,
-			YoloDocument,
-			YoloDocumentData,
-			YoloDocumentDataSlicesSlice,
 			AllDocumentTypes,
 			AboutImgSlice,
 			AboutImgSliceDefaultPrimary,

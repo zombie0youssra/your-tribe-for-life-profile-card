@@ -1,8 +1,9 @@
 <script>
 	/** @type {import("@prismicio/client").Content.TextBlockSlice} */
+	import { PrismicRichText } from '@prismicio/svelte';
 	export let slice;
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	Placeholder component for {slice.slice_type} (variation: {slice.variation}) Slices
+	<PrismicRichText field={slice.primary.textblock} />
 </section>

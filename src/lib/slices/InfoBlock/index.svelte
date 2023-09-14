@@ -4,5 +4,7 @@
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<p>{slice.items[0].infotext}</p>
+	{#each slice.items as element (element.id)}
+		<p>{element.infotext}</p>
+	{/each}
 </section>

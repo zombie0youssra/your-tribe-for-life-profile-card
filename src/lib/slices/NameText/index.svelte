@@ -9,6 +9,7 @@
 
 <style>
 	h1 {
+		margin-left: 1rem;
 		color: aliceblue;
 		font-size: 24px;
 	}

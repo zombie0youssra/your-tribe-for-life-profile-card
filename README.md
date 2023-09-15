@@ -2,7 +2,6 @@
 ## Using svelteKit and Prismic.io
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
-<img width="369" alt="image" src="https://github.com/zombie0youssra/your-tribe-for-life-profile-card/assets/112857270/b713e61c-73d1-4272-bf5c-72df12d0ad1d">
 
 ## Inhoudsopgave
 

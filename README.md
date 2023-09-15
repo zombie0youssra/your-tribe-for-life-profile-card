@@ -51,7 +51,7 @@ npm create svelte@latest
 ### maak een project aan in mijn folder
 npm create svelte@latest my-app
 
-### laatse stap
+### laatste stap
 na het instaleren van het project 
 run command npm install en daarna npm run dev o  je project in de local host te zien
 

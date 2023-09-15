@@ -2,6 +2,7 @@
 ## Using svelteKit and Prismic.io
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+<img width="369" alt="image" src="https://github.com/zombie0youssra/your-tribe-for-life-profile-card/assets/112857270/b713e61c-73d1-4272-bf5c-72df12d0ad1d">
 
 ## Inhoudsopgave
 
@@ -15,6 +16,7 @@
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
+Redesign je visitekaartje op basis van een headless CMS en een framework.
 
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
@@ -42,7 +44,17 @@
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+If you're seeing this, you've probably already done this step. Congrats!
 
+# maak een project aan
+npm create svelte@latest
+
+# maak een project aan in mijn folder
+npm create svelte@latest my-app
+
+# laatse stap
+na het instaleren van het project 
+run command npm install en daarna npm run dev o  je project in de local host te zien
 
 ## Bronnen
 

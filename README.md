@@ -44,7 +44,6 @@ Redesign je visitekaartje op basis van een headless CMS en een framework.
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
-If you're seeing this, you've probably already done this step. Congrats!
 
 ### maak een project aan
 npm create svelte@latest

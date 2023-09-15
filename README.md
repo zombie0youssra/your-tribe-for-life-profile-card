@@ -15,6 +15,7 @@
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
+Redesign je visitekaartje op basis van een headless CMS en een framework.
 
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
@@ -43,6 +44,15 @@
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
+### maak een project aan
+npm create svelte@latest
+
+### maak een project aan in mijn folder
+npm create svelte@latest my-app
+
+### laatste stap
+na het instaleren van het project 
+run command npm install en daarna npm run dev o  je project in de local host te zien
 
 ## Bronnen
 

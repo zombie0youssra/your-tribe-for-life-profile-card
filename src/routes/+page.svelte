@@ -7,4 +7,15 @@
 	// console.log(data);
 </script>
 
-<SliceZone slices={data.slices} {components} />
+<section>
+	<SliceZone slices={data.slices} {components} />
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(66, 66, 109);
+		border-radius: 2rem;
+	}
+</style>

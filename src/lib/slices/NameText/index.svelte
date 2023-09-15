@@ -6,3 +6,10 @@
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<h1>{slice.primary.youssra}</h1>
 </section>
+
+<style>
+	h1 {
+		color: aliceblue;
+		font-size: 24px;
+	}
+</style>

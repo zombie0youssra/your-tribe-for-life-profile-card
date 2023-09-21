@@ -7,6 +7,12 @@
 	// console.log(data);
 </script>
 
-<body>
+<main>
 	<SliceZone slices={data.slices} {components} />
-</body>
+</main>
+
+<style>
+	main {
+		margin-left: -1rem;
+	}
+</style>

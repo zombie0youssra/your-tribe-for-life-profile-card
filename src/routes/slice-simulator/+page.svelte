@@ -4,6 +4,8 @@
 	import { components } from '$lib/slices';
 </script>
 
-<SliceSimulator let:slices>
-	<SliceZone {slices} {components} />
-</SliceSimulator>
+<main>
+	<SliceSimulator let:slices>
+		<SliceZone {slices} {components} />
+	</SliceSimulator>
+</main>

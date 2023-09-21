@@ -11,8 +11,8 @@
 
 				<ul class="content__container__list">
 					<li class="content__container__list__item">world!</li>
-					<li class="content__container__list__item">coder!</li>
-					<li class="content__container__list__item">users!</li>
+					<li class="content__container__list__item">human!</li>
+					<li class="content__container__list__item">alien!</li>
 					<li class="content__container__list__item">nerds!</li>
 				</ul>
 			</div>

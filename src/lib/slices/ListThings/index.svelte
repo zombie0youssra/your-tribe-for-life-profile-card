@@ -7,6 +7,6 @@
 	{#each slice.items as item (item)}
 		<img src={item.imgproof.url} alt={item.imgproof.url} />
 		<span>{item.info}</span>
-		<a href={item.weblink}>Link</a>
+		<!-- <a href={item.weblink}>Link</a> -->
 	{/each}
 </section>

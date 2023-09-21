@@ -7,3 +7,12 @@
 	<p>{slice.primary.about}</p>
 	<img src={slice.primary.myimg.url} alt={slice.primary.myimg.alt} />
 </section>
+
+<style>
+	section {
+		display: flex;
+		margin-top: 4rem;
+		flex-direction: row;
+		background-color: #c38c00;
+	}
+</style>

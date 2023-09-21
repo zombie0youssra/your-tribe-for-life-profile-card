@@ -11,16 +11,24 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
-      "items": {
-        "infotext": {
+      "primary": {
+        "about": {
           "type": "Text",
           "config": {
-            "label": "Infotext",
+            "label": "about",
             "placeholder": ""
           }
+        },
+        "myimg": {
+          "type": "Image",
+          "config": {
+            "label": "myimg",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

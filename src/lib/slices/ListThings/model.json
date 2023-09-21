@@ -1,0 +1,42 @@
+{
+  "id": "list_things",
+  "type": "SharedSlice",
+  "name": "ListThings",
+  "description": "ListThings",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "imgproof": {
+          "type": "Image",
+          "config": {
+            "label": "imgproof",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "info": {
+          "type": "Text",
+          "config": {
+            "label": "info",
+            "placeholder": ""
+          }
+        },
+        "weblink": {
+          "type": "Link",
+          "config": {
+            "label": "weblink",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

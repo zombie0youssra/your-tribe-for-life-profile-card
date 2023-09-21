@@ -1,8 +1,8 @@
 {
-  "id": "about_img",
+  "id": "sec_title",
   "type": "SharedSlice",
-  "name": "AboutImg",
-  "description": "AboutImg",
+  "name": "SecTitle",
+  "description": "SecTitle",
   "variations": [
     {
       "id": "default",
@@ -12,12 +12,11 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "aboutImg": {
-          "type": "Image",
+        "sectitle": {
+          "type": "Text",
           "config": {
-            "label": "aboutImg",
-            "constraint": {},
-            "thumbnails": []
+            "label": "sectitle",
+            "placeholder": ""
           }
         }
       },

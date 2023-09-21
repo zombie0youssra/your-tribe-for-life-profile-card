@@ -3,9 +3,9 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"youssra": {
+			"name": {
 				"__TYPE__": "FieldContent",
-				"value": "beside",
+				"value": "hill",
 				"type": "Text"
 			}
 		},

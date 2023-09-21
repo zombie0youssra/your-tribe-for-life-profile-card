@@ -4,23 +4,16 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type IndexDocumentDataSlicesSlice = AboutImgSlice | NameTextSlice | InfoBlockSlice;
+type IndexDocumentDataSlicesSlice =
+	| InfoBlockSlice
+	| SecTitleSlice
+	| ListThingsSlice
+	| TitleMainSlice;
 
 /**
  * Content for index documents
  */
 interface IndexDocumentData {
-	/**
-	 * aboutimg field in *index*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.aboutimg
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	aboutimg: prismic.ImageField<never>;
-
 	/**
 	 * name field in *index*
 	 *
@@ -31,17 +24,6 @@ interface IndexDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	name: prismic.KeyTextField;
-
-	/**
-	 * info field in *index*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.info
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	info: prismic.KeyTextField;
 
 	/**
 	 * Slice Zone field in *index*
@@ -105,60 +87,28 @@ export type IndexDocument<Lang extends string = string> = prismic.PrismicDocumen
 export type AllDocumentTypes = IndexDocument;
 
 /**
- * Primary content in *AboutImg → Primary*
+ * Primary content in *InfoBlock → Primary*
  */
-export interface AboutImgSliceDefaultPrimary {
+export interface InfoBlockSliceDefaultPrimary {
 	/**
-	 * aboutImg field in *AboutImg → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about_img.primary.aboutImg
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	aboutImg: prismic.ImageField<never>;
-}
-
-/**
- * Default variation for AboutImg Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type AboutImgSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<AboutImgSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *AboutImg*
- */
-type AboutImgSliceVariation = AboutImgSliceDefault;
-
-/**
- * AboutImg Shared Slice
- *
- * - **API ID**: `about_img`
- * - **Description**: AboutImg
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type AboutImgSlice = prismic.SharedSlice<'about_img', AboutImgSliceVariation>;
-
-/**
- * Primary content in *InfoBlock → Items*
- */
-export interface InfoBlockSliceDefaultItem {
-	/**
-	 * Infotext field in *InfoBlock → Items*
+	 * about field in *InfoBlock → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: info_block.items[].infotext
+	 * - **API ID Path**: info_block.primary.about
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	infotext: prismic.KeyTextField;
+	about: prismic.KeyTextField;
+
+	/**
+	 * myimg field in *InfoBlock → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: info_block.primary.myimg
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	myimg: prismic.ImageField<never>;
 }
 
 /**
@@ -170,8 +120,8 @@ export interface InfoBlockSliceDefaultItem {
  */
 export type InfoBlockSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Record<string, never>,
-	Simplify<InfoBlockSliceDefaultItem>
+	Simplify<InfoBlockSliceDefaultPrimary>,
+	never
 >;
 
 /**
@@ -189,46 +139,150 @@ type InfoBlockSliceVariation = InfoBlockSliceDefault;
 export type InfoBlockSlice = prismic.SharedSlice<'info_block', InfoBlockSliceVariation>;
 
 /**
- * Primary content in *NameText → Primary*
+ * Primary content in *ListThings → Items*
  */
-export interface NameTextSliceDefaultPrimary {
+export interface ListThingsSliceDefaultItem {
 	/**
-	 * Youssra field in *NameText → Primary*
+	 * imgproof field in *ListThings → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: list_things.items[].imgproof
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	imgproof: prismic.ImageField<never>;
+
+	/**
+	 * info field in *ListThings → Items*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: name_text.primary.youssra
+	 * - **API ID Path**: list_things.items[].info
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	youssra: prismic.KeyTextField;
+	info: prismic.KeyTextField;
+
+	/**
+	 * weblink field in *ListThings → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: list_things.items[].weblink
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	weblink: prismic.LinkField;
 }
 
 /**
- * Default variation for NameText Slice
+ * Default variation for ListThings Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type NameTextSliceDefault = prismic.SharedSliceVariation<
+export type ListThingsSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<NameTextSliceDefaultPrimary>,
+	Record<string, never>,
+	Simplify<ListThingsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ListThings*
+ */
+type ListThingsSliceVariation = ListThingsSliceDefault;
+
+/**
+ * ListThings Shared Slice
+ *
+ * - **API ID**: `list_things`
+ * - **Description**: ListThings
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListThingsSlice = prismic.SharedSlice<'list_things', ListThingsSliceVariation>;
+
+/**
+ * Primary content in *SecTitle → Primary*
+ */
+export interface SecTitleSliceDefaultPrimary {
+	/**
+	 * sectitle field in *SecTitle → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: sec_title.primary.sectitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	sectitle: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for SecTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SecTitleSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SecTitleSliceDefaultPrimary>,
 	never
 >;
 
 /**
- * Slice variation for *NameText*
+ * Slice variation for *SecTitle*
  */
-type NameTextSliceVariation = NameTextSliceDefault;
+type SecTitleSliceVariation = SecTitleSliceDefault;
 
 /**
- * NameText Shared Slice
+ * SecTitle Shared Slice
  *
- * - **API ID**: `name_text`
- * - **Description**: NameText
+ * - **API ID**: `sec_title`
+ * - **Description**: SecTitle
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type NameTextSlice = prismic.SharedSlice<'name_text', NameTextSliceVariation>;
+export type SecTitleSlice = prismic.SharedSlice<'sec_title', SecTitleSliceVariation>;
+
+/**
+ * Primary content in *TitleMain → Primary*
+ */
+export interface TitleMainSliceDefaultPrimary {
+	/**
+	 * Name field in *TitleMain → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: title_main.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for TitleMain Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitleMainSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<TitleMainSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *TitleMain*
+ */
+type TitleMainSliceVariation = TitleMainSliceDefault;
+
+/**
+ * TitleMain Shared Slice
+ *
+ * - **API ID**: `title_main`
+ * - **Description**: TitleMain
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitleMainSlice = prismic.SharedSlice<'title_main', TitleMainSliceVariation>;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -244,18 +298,22 @@ declare module '@prismicio/client' {
 			IndexDocumentData,
 			IndexDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			AboutImgSlice,
-			AboutImgSliceDefaultPrimary,
-			AboutImgSliceVariation,
-			AboutImgSliceDefault,
 			InfoBlockSlice,
-			InfoBlockSliceDefaultItem,
+			InfoBlockSliceDefaultPrimary,
 			InfoBlockSliceVariation,
 			InfoBlockSliceDefault,
-			NameTextSlice,
-			NameTextSliceDefaultPrimary,
-			NameTextSliceVariation,
-			NameTextSliceDefault
+			ListThingsSlice,
+			ListThingsSliceDefaultItem,
+			ListThingsSliceVariation,
+			ListThingsSliceDefault,
+			SecTitleSlice,
+			SecTitleSliceDefaultPrimary,
+			SecTitleSliceVariation,
+			SecTitleSliceDefault,
+			TitleMainSlice,
+			TitleMainSliceDefaultPrimary,
+			TitleMainSliceVariation,
+			TitleMainSliceDefault
 		};
 	}
 }

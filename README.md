@@ -15,7 +15,8 @@
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
-<img width="255" alt="image" src="https://github.com/zombie0youssra/your-tribe-for-life-profile-card/assets/112857270/f289c1d7-4793-4c56-b81d-bb6c96789c07">
+<img width="424" alt="image" src="https://github.com/zombie0youssra/your-tribe-for-life-profile-card/assets/112857270/98412cf0-ed5a-4669-b416-a6d820fffcd8">
+
 
 Redesign je visitekaartje op basis van een headless CMS en een framework.
 
